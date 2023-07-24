@@ -1,10 +1,69 @@
 site_name: 字节码
-site_description: 'A docs test'
-site_author: 'Michael Hausenblas'
-docs_dir: docs/
-repo_name: 'mhausenblas/mkdocs-template'
-repo_url: 'https://github.com/mhausenblas/mkdocs-template'
-nav:
-    - Home: index.md
 theme:
-  name: 'material'
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: zh
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: indigo
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: indigo
+      accent: lime
+
+nav:
+  - 主页:
+      - 主页: index.md
+  - Scala:
+      - About: scala/index.md
+plugins:
+  - social
+  - search:
+      lang:
+        - en
+        - zh
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/dongxuwang
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/wangdx
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dongxuwang
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/dongxuwang"  target="_blank" rel="noopener">Dongxu Wang</a> |
+  <a target="_blank" href="https://beian.miit.gov.cn">粤ICP备18019449号-1</a>
